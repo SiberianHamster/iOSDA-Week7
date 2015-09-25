@@ -7,8 +7,15 @@
 //
 
 #import "MyProfileViewController.h"
+#import "StackOverflowService.h"
+#import "ProfileJSONParser.h"
+#import "Profile.h"
 
 @interface MyProfileViewController ()
+@property (retain, nonatomic) IBOutlet UIView *imageOfProfile;
+@property (retain, nonatomic) IBOutlet UILabel *nameLabel;
+@property (retain, nonatomic) IBOutlet UILabel *reputationLabel;
+@property (retain, nonatomic) NSMutableArray *profiles;
 
 @end
 
@@ -16,22 +23,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+  [StackOverflowService completionHandlerForUser:^(NSArray *results, NSError *error) {
+    
+    if(error){
+      NSLog(@"error: %@", error);
+    }
+    else{
+      
+      for (Profile *profile in results){
+        Profile *myProfile = [[Profile alloc]init];
+        myProfile.profileName = profile.profileName;
+        myProfile.avatarURL = profile.avatarURL;
+        myProfile.reputation = profile.reputation;
+        NSURL *profileURL = [NSURL URLWithString:myProfile.avatarURL];
+        NSData *imageFromURL = [NSData dataWithContentsOfURL:profileURL];
+        myProfile.profileImage = [UIImage imageWithData:imageFromURL];
+        [self.profiles addObject: myProfile];
 
-/*
-#pragma mark - Navigation
+      }
+      Profile *myProfile = self.profiles[0];
+//      self.imageOfProfile.image = myProfile.profileImage;
+      [self.nameLabel setText:myProfile.profileName];
+      [self.reputationLabel setText:myProfile.reputation];
+      //cool stuff
+    }
+    
+    
+  }
+  
+  
+   ];}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
 
 @end

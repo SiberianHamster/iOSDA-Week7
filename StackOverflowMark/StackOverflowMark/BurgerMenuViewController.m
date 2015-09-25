@@ -76,12 +76,10 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.3;
 
 -(void)viewDidAppear:(BOOL)animated{
   [super viewDidAppear:animated];
-  NSString *token = [[NSString alloc]init];
   NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-  token = [userDefaults stringForKey:@"token"];
-  NSLog(@"token:%@",token);
+  NSString *token = [userDefaults stringForKey:@"token"];  
 
-  if ([token isEqual: @""]) {
+  if (!token) {
   
   WebViewController *webVC = [[WebViewController alloc] init];
   [self presentViewController:webVC animated:true completion:nil];
@@ -122,6 +120,7 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.3;
 //Button Pressed
 -(void)burgerButtonPressed:(UIButton *)sender {
   [UIView animateWithDuration:ktimeToSlideMenuOpen animations:^{
+    [self.view endEditing:true];
     self.topViewController.view.center = CGPointMake(self.view.center.x * kburgerOpenScreenMultiplier, self.topViewController.view.center.y);
   } completion:^(BOOL finished) {
     

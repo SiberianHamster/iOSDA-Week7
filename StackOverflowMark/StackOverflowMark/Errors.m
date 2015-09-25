@@ -8,4 +8,4 @@
 
 #import "Errors.h"
 
-NSString *const kStackOverFlowErrorDomain = @"com.markblahblah";
+NSString *const kStackOverFlowErrorDomain = @"com.marklin.stackoverflow";

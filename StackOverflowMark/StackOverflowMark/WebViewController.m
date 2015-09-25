@@ -46,13 +46,16 @@
     NSArray *components = [fragmentString componentsSeparatedByString:@"&"];
     NSString *fullTokenParameter = components.firstObject;
     NSString *token = [fullTokenParameter componentsSeparatedByString:@"="].lastObject;
-    NSLog(@"token: %@",token);
+    
+    NSString *key = @"*VDTT4nf1ZLSwtuOueeiPw((";
 
     if (token) {
       
       NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
       [userDefaults setObject:token forKey:@"token"];
+      [userDefaults setObject:key forKey:@"key"];
       [self dismissViewControllerAnimated:true completion:nil];
+      
     }
     else {
     //error of some sort

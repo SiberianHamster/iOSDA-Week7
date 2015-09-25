@@ -11,5 +11,10 @@
 extern NSString *const kStackOverFlowErrorDomain;
 
 typedef enum : NSUInteger {
+  StackOverFlowTooManyAttempts,
+  StackOverFlowInvalidParameter,
+  StackOverFlowNeedAuthentication,
+  StackOverFlowGeneralError,
   StackOverFlowConnectionDown
+  
 } StackOverFlowErrorCodes;
