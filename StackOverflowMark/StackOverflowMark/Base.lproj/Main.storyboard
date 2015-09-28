@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640" y="-162"/>
+            <point key="canvasLocation" x="-354" y="-446"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="wr5-wz-Xe1">
@@ -262,31 +262,65 @@
                                     <constraint firstAttribute="height" constant="145" id="sxN-Ih-Jno"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTI-Sn-LVF">
-                                <rect key="frame" x="279" y="211" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTI-Sn-LVF">
+                                <rect key="frame" x="279" y="211" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9We-FI-5hn">
+                                <rect key="frame" x="279" y="239" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9We-FI-5hn">
-                                <rect key="frame" x="279" y="240" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="UserName:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJf-i6-5rm">
+                                <rect key="frame" x="185" y="210" width="86" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="r6E-ua-cWN"/>
+                                    <constraint firstAttribute="height" constant="21" id="rD7-6z-dTh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reputation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD1-Na-6tQ">
+                                <rect key="frame" x="183" y="239" width="88" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DQH-vO-bgu"/>
+                                    <constraint firstAttribute="width" constant="88" id="ltC-eU-pNU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-g1-BnK">
+                                <rect key="frame" x="270.5" y="269.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="f8D-dd-U1y"/>
+                                    <constraint firstAttribute="height" constant="60" id="vg1-s6-qdH"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.096187776330000002" green="0.0" blue="0.42298367170000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="YTI-Sn-LVF" firstAttribute="leading" secondItem="RJf-i6-5rm" secondAttribute="trailing" constant="8" id="58O-uE-mK5"/>
+                            <constraint firstItem="YTI-Sn-LVF" firstAttribute="bottom" secondItem="RJf-i6-5rm" secondAttribute="bottom" id="5df-Uh-hiC"/>
                             <constraint firstAttribute="centerX" secondItem="YBn-bg-juJ" secondAttribute="centerX" id="7Z6-cA-ip6"/>
                             <constraint firstItem="YTI-Sn-LVF" firstAttribute="top" secondItem="YBn-bg-juJ" secondAttribute="bottom" constant="38" id="At7-13-ex4"/>
                             <constraint firstItem="9We-FI-5hn" firstAttribute="top" secondItem="YTI-Sn-LVF" secondAttribute="bottom" constant="8" id="HEk-Ns-fMI"/>
                             <constraint firstItem="YBn-bg-juJ" firstAttribute="top" secondItem="7wa-BR-Ea7" secondAttribute="bottom" constant="8" id="HIp-ys-ZKT"/>
                             <constraint firstAttribute="centerX" secondItem="YTI-Sn-LVF" secondAttribute="centerX" id="HXw-hR-KYu"/>
+                            <constraint firstItem="iAE-g1-BnK" firstAttribute="centerY" secondItem="aai-uI-dTM" secondAttribute="centerY" id="SDw-kG-RSR"/>
                             <constraint firstAttribute="centerX" secondItem="9We-FI-5hn" secondAttribute="centerX" id="SI2-R4-olr"/>
+                            <constraint firstItem="iAE-g1-BnK" firstAttribute="centerX" secondItem="aai-uI-dTM" secondAttribute="centerX" id="WFe-xc-Y2o"/>
+                            <constraint firstItem="9We-FI-5hn" firstAttribute="leading" secondItem="SD1-Na-6tQ" secondAttribute="trailing" constant="8" id="XoD-eG-ZPd"/>
+                            <constraint firstItem="9We-FI-5hn" firstAttribute="bottom" secondItem="SD1-Na-6tQ" secondAttribute="bottom" id="yYN-Cz-QyY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageOfProfile" destination="YBn-bg-juJ" id="p6s-xR-wWL"/>
+                        <outlet property="activityIndicator" destination="iAE-g1-BnK" id="MDI-Lh-oFX"/>
+                        <outlet property="imageOfProfile" destination="YBn-bg-juJ" id="Mmk-Qk-QbF"/>
                         <outlet property="nameLabel" destination="YTI-Sn-LVF" id="GsA-zU-d7B"/>
                         <outlet property="reputationLabel" destination="9We-FI-5hn" id="p7r-r7-JLa"/>
                     </connections>

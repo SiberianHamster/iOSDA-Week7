@@ -56,34 +56,37 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.3;
   
   self.viewControllers = @[searchQuestionVC,myQuestionsVC,myProfileVC];
   
-  
   //Button
   self.burgerButton = [[UIButton alloc]initWithFrame:CGRectMake(kburgerButtonXPosition, kburgerButtonYPosition, kburgerButtonWidth, kburgerButtonHeight)];
   [self.burgerButton setImage:[UIImage imageNamed:@"burger"] forState:UIControlStateNormal];
   [self.topViewController.view addSubview: self.burgerButton];
     [self.burgerButton addTarget:self action:@selector(burgerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
 
-  
+
   //Gesture
   self.pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(topViewControllerPanned:)];
   [self.topViewController.view addGestureRecognizer:self.pan];
   
   
-  
+
   
     // Do any additional setup after loading the view.
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+
   [super viewDidAppear:animated];
   NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-  NSString *token = [userDefaults stringForKey:@"token"];  
-
+  NSString *token = [userDefaults stringForKey:@"token"];
+  
+  
   if (!token) {
   
   WebViewController *webVC = [[WebViewController alloc] init];
-  [self presentViewController:webVC animated:true completion:nil];
+   [self presentViewController:webVC animated:true completion:nil];
+
 }
+
 }
 
 

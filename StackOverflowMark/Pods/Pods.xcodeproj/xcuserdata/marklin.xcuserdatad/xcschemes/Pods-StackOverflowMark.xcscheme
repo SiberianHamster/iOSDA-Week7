@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6E181A4B80A3B93894E6DAE6"
+               BlueprintIdentifier = "5BA3B4D8E40BA34B591529EF"
                BuildableName = "libPods-StackOverflowMark.a"
                BlueprintName = "Pods-StackOverflowMark"
                ReferencedContainer = "container:Pods.xcodeproj">

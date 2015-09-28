@@ -11,5 +11,5 @@
 @interface QuestionJSONParser : NSObject
 
 +(NSArray *)questionsResultsFromJSON:(NSDictionary *)jsonInfo;
-
++(NSArray *)profileResultsFromJSON:(NSDictionary *)jsonProfileInfo;
 @end

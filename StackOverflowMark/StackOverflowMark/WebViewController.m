@@ -18,28 +18,30 @@
 @implementation WebViewController
 
 
-- (void)viewDidLoad {WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame];
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  
+  WKWebView *webView = [[WKWebView alloc]initWithFrame:self.view.frame];
   [self.view addSubview:webView];
   webView.navigationDelegate = self;
+  
+  
   
   NSString *baseURL = @"https://stackexchange.com/oauth/dialog";
   NSString *clientID = @"5575";
   NSString *redirectURI = @"https://stackexchange.com/oauth/login_success";
   NSString *finalURL = [NSString stringWithFormat:@"%@?client_id=%@&redirect_uri=%@",baseURL,clientID,redirectURI];
-
+  
   [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:finalURL]]];
-    [super viewDidLoad];
+  
+  NSLog(@"finalURL:%@",finalURL);
     // Do any additional setup after loading the view.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
   
-  NSLog(@"path: %@",navigationAction.request.URL.path);
+//  NSLog(@"path: %@",navigationAction.request.URL.path);
   
   if ([navigationAction.request.URL.path isEqualToString:@"/oauth/login_success"]) {
     NSString *fragmentString = navigationAction.request.URL.fragment;
@@ -48,7 +50,6 @@
     NSString *token = [fullTokenParameter componentsSeparatedByString:@"="].lastObject;
     
     NSString *key = @"*VDTT4nf1ZLSwtuOueeiPw((";
-
     if (token) {
       
       NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -58,6 +59,7 @@
       
     }
     else {
+      NSLog(@"error");
     //error of some sort
     }
   }
