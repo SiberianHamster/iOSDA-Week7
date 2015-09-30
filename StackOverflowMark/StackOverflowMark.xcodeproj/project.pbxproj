@@ -13,6 +13,8 @@
 		AE1905921BA9C8180070616B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1905911BA9C8180070616B /* WebViewController.m */; };
 		AE61A24B1BAB099B00C68485 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = AE61A24A1BAB099B00C68485 /* Question.m */; };
 		AE61A24E1BAB0BA100C68485 /* QuestionJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AE61A24D1BAB0BA100C68485 /* QuestionJSONParser.m */; };
+		AE81360E1BB9FFDA002922CA /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = AE81360D1BB9FFDA002922CA /* Node.m */; settings = {ASSET_TAGS = (); }; };
+		AE8136111BBA0520002922CA /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8136101BBA0520002922CA /* BinaryTree.m */; settings = {ASSET_TAGS = (); }; };
 		AED29CE81BA865E300BECFDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED29CE71BA865E300BECFDE /* main.m */; };
 		AED29CEB1BA865E300BECFDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED29CEA1BA865E300BECFDE /* AppDelegate.m */; };
 		AED29CF11BA865E300BECFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED29CEF1BA865E300BECFDE /* Main.storyboard */; };
@@ -51,6 +53,10 @@
 		AE61A24A1BAB099B00C68485 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		AE61A24C1BAB0BA100C68485 /* QuestionJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionJSONParser.h; sourceTree = "<group>"; };
 		AE61A24D1BAB0BA100C68485 /* QuestionJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionJSONParser.m; sourceTree = "<group>"; };
+		AE81360C1BB9FFDA002922CA /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		AE81360D1BB9FFDA002922CA /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		AE81360F1BBA0520002922CA /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
+		AE8136101BBA0520002922CA /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		AED29CE21BA865E300BECFDE /* StackOverflowMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED29CE61BA865E300BECFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AED29CE71BA865E300BECFDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,6 +138,10 @@
 			children = (
 				AED29CE91BA865E300BECFDE /* AppDelegate.h */,
 				AED29CEA1BA865E300BECFDE /* AppDelegate.m */,
+				AE81360F1BBA0520002922CA /* BinaryTree.h */,
+				AE8136101BBA0520002922CA /* BinaryTree.m */,
+				AE81360C1BB9FFDA002922CA /* Node.h */,
+				AE81360D1BB9FFDA002922CA /* Node.m */,
 				AE19058D1BA9C62F0070616B /* Errors.h */,
 				AE19058E1BA9C62F0070616B /* Errors.m */,
 				AE1905901BA9C8180070616B /* WebViewController.h */,
@@ -339,12 +349,14 @@
 				AE19058F1BA9C62F0070616B /* Errors.m in Sources */,
 				AE61A24E1BAB0BA100C68485 /* QuestionJSONParser.m in Sources */,
 				AED29CEB1BA865E300BECFDE /* AppDelegate.m in Sources */,
+				AE81360E1BB9FFDA002922CA /* Node.m in Sources */,
 				AEFB8C171BAFEA360040F1EF /* Profile.m in Sources */,
 				AE1905921BA9C8180070616B /* WebViewController.m in Sources */,
 				AED29CE81BA865E300BECFDE /* main.m in Sources */,
 				AED29D161BA868BB00BECFDE /* MyProfileViewController.m in Sources */,
 				AEFB8C141BAFE93F0040F1EF /* ProfileJSONParser.m in Sources */,
 				AED29D131BA868AC00BECFDE /* SearchQuestionsViewController.m in Sources */,
+				AE8136111BBA0520002922CA /* BinaryTree.m in Sources */,
 				AE61A24B1BAB099B00C68485 /* Question.m in Sources */,
 				AED29D101BA8689600BECFDE /* MyQuestionsViewController.m in Sources */,
 				AE1413CE1BA9F9D600017D0D /* StackOverflowService.m in Sources */,
