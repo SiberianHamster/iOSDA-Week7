@@ -7,7 +7,8 @@
 //
 
 #import "QuestionJSONParser.h"
-#import "Question.h"
+//#import "Question.h"
+#import "StackOverflowMark-Swift.h"
 
 
 @implementation QuestionJSONParser

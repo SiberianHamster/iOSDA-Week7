@@ -15,6 +15,7 @@
 		AE61A24E1BAB0BA100C68485 /* QuestionJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AE61A24D1BAB0BA100C68485 /* QuestionJSONParser.m */; };
 		AE81360E1BB9FFDA002922CA /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = AE81360D1BB9FFDA002922CA /* Node.m */; settings = {ASSET_TAGS = (); }; };
 		AE8136111BBA0520002922CA /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8136101BBA0520002922CA /* BinaryTree.m */; settings = {ASSET_TAGS = (); }; };
+		AEB11B071BBD2ABD00BB2940 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB11B061BBD2ABD00BB2940 /* Question.swift */; settings = {ASSET_TAGS = (); }; };
 		AED29CE81BA865E300BECFDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED29CE71BA865E300BECFDE /* main.m */; };
 		AED29CEB1BA865E300BECFDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED29CEA1BA865E300BECFDE /* AppDelegate.m */; };
 		AED29CF11BA865E300BECFDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED29CEF1BA865E300BECFDE /* Main.storyboard */; };
@@ -57,6 +58,8 @@
 		AE81360D1BB9FFDA002922CA /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 		AE81360F1BBA0520002922CA /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		AE8136101BBA0520002922CA /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
+		AEB11B051BBD2ABC00BB2940 /* StackOverflowMark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackOverflowMark-Bridging-Header.h"; sourceTree = "<group>"; };
+		AEB11B061BBD2ABD00BB2940 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		AED29CE21BA865E300BECFDE /* StackOverflowMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED29CE61BA865E300BECFDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AED29CE71BA865E300BECFDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 				AED29D0C1BA8667C00BECFDE /* BurgerMenuViewController.m */,
 				AE61A2491BAB099B00C68485 /* Question.h */,
 				AE61A24A1BAB099B00C68485 /* Question.m */,
+				AEB11B061BBD2ABD00BB2940 /* Question.swift */,
 				AEFB8C121BAFE93F0040F1EF /* ProfileJSONParser.h */,
 				AEFB8C131BAFE93F0040F1EF /* ProfileJSONParser.m */,
 				AED29D111BA868AC00BECFDE /* SearchQuestionsViewController.h */,
@@ -170,6 +174,7 @@
 				AED29CF21BA865E300BECFDE /* Images.xcassets */,
 				AED29CF41BA865E300BECFDE /* LaunchScreen.xib */,
 				AED29CE51BA865E300BECFDE /* Supporting Files */,
+				AEB11B051BBD2ABC00BB2940 /* StackOverflowMark-Bridging-Header.h */,
 			);
 			path = StackOverflowMark;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 		AED29CDA1BA865E300BECFDE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Mark Lin";
 				TargetAttributes = {
@@ -347,6 +353,7 @@
 				AED29D0D1BA8667C00BECFDE /* BurgerMenuViewController.m in Sources */,
 				AEFB8C0E1BAF9DD50040F1EF /* QuestionTableViewCell.m in Sources */,
 				AE19058F1BA9C62F0070616B /* Errors.m in Sources */,
+				AEB11B071BBD2ABD00BB2940 /* Question.swift in Sources */,
 				AE61A24E1BAB0BA100C68485 /* QuestionJSONParser.m in Sources */,
 				AED29CEB1BA865E300BECFDE /* AppDelegate.m in Sources */,
 				AE81360E1BB9FFDA002922CA /* Node.m in Sources */,
@@ -488,10 +495,15 @@
 			baseConfigurationReference = C64F30F0450939029D793230 /* Pods-StackOverflowMark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = StackOverflowMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_MODULE_NAME = StackOverflowMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackOverflowMark/StackOverflowMark-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -500,10 +512,14 @@
 			baseConfigurationReference = 7691764DAE2BB84FB8CADE4F /* Pods-StackOverflowMark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = StackOverflowMark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_MODULE_NAME = StackOverflowMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackOverflowMark/StackOverflowMark-Bridging-Header.h";
 			};
 			name = Release;
 		};
