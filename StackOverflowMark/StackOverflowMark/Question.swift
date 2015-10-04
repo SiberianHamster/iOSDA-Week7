@@ -10,14 +10,17 @@ import UIKit
 
 class Question: NSObject {
   
-  var title:NSString
-  var avatarURL:NSString
+  var title:NSString?
+  var avatarURL:NSString?
   var profileImage:UIImage?
-  var displayName:NSString
+  var displayName:NSString?
   
-  init(title:NSString, avatarURL:NSString, displayName:NSString) {
-    self.title = title
-    self.avatarURL = avatarURL
-    self.displayName = displayName
+//  init(title:NSString, avatarURL:NSString, displayName:NSString) {
+//    self.title = title
+//    self.avatarURL = avatarURL
+//    self.displayName = displayName
+//  }
+  
+  override init(){
   }
 }
