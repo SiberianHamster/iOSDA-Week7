@@ -7,8 +7,13 @@
 //
 
 #import "MyQuestionsViewController.h"
+#import "MyQuestionCell.h"
 
-@interface MyQuestionsViewController ()
+@interface MyQuestionsViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *questions;
+
 
 @end
 
@@ -16,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  self.tableView.delegate = self;
+  self.tableView.dataSource = self;
     // Do any additional setup after loading the view.
 }
 
@@ -24,14 +31,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  MyQuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+  
+  return cell;
 }
-*/
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+  return self.questions.count;
+}
 
 @end
