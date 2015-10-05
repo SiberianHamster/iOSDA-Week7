@@ -8,6 +8,7 @@
 
 #import "MyQuestionsViewController.h"
 #import "MyQuestionCell.h"
+#import "StackOverflowMark-Swift.h"
 
 @interface MyQuestionsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -23,7 +24,9 @@
     [super viewDidLoad];
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
-    // Do any additional setup after loading the view.
+  
+  //call StackOverflowService Method to make a call to stack, then call a JsonParser on it and save each object into self.questions array.
+  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,8 +35,10 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  MyQuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-  
+  MyQuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+  Question *question = [[Question alloc]init];
+  question = self.questions[indexPath.row];
+  cell.myQuestionLabel.text = question.title;
   return cell;
 }
 

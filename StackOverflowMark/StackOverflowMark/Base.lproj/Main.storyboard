@@ -247,7 +247,7 @@
                                 <rect key="frame" x="20" y="90" width="560" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kzX-RS-ajW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kzX-RS-ajW" customClass="MyQuestionCell">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kzX-RS-ajW" id="6sp-Wr-w5W">
@@ -268,6 +268,9 @@
                                                 <constraint firstItem="XVO-qV-JkY" firstAttribute="top" secondItem="6sp-Wr-w5W" secondAttribute="topMargin" id="lCy-37-2kh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myQuestionLabel" destination="XVO-qV-JkY" id="58B-7D-bxX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
