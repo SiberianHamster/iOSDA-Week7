@@ -25,7 +25,9 @@
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   
-  //call StackOverflowService Method to make a call to stack, then call a JsonParser on it and save each object into self.questions array.
+  //!!!!!!!!!!!!!!call StackOverflowService Method(need to implement) to make a call to stack, then that method calls a JsonParser (need to implement) on it and save each object into self.questions array here  Might actually get away with using a non mutable array if my method passes entire array.!!!!!!!!!!!!!!
+  
+  
   
 }
 
