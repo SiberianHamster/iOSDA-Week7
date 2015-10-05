@@ -14,5 +14,7 @@
 
 + (void)completionHandlerForUser:(void (^) (NSArray *result, NSError *error))completionHandlerForUser;
 
++ (void)showMeMyPosts:(void(^)(NSArray *questions, NSError *error)) completionHandler;
+
 
 @end

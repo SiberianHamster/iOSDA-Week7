@@ -14,6 +14,7 @@
 //#import "Question.h"
 #import "ProfileJSONParser.h"
 #import "StackOverflowMark-Swift.h"
+#import "MyQuestionJSONParser.h"
 
 
 
@@ -26,6 +27,45 @@
 
 
 @implementation StackOverflowService
+
++ (void)showMeMyPosts:(void(^)(NSArray *results, NSError *error)) completionHandler;
+{NSString *baseurl = @"https://api.stackexchange.com/2.2/me/posts?order=desc&sort=activity&site=stackoverflow";
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  NSString *token = [userDefaults stringForKey:@"token"];
+  NSString *key = [userDefaults stringForKey:@"key"];
+  NSString *url = [NSString stringWithFormat:@"%@&access_token=%@&key=%@",baseurl, token, key];
+  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+  [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    
+    NSLog(@"%ld",operation.response.statusCode);
+    NSLog(@"%@",responseObject);
+    NSArray *jsonArray = [MyQuestionJSONParser myQuestionFromJSON:responseObject];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      completionHandler(jsonArray,nil);
+      
+    });
+    
+    
+  } failure:^(AFHTTPRequestOperation *operation , NSError *error) {
+    {if (operation.response) {
+      NSError *stackOverflowError = [self errorForStatusCode:operation.response.statusCode];
+      
+      dispatch_async(dispatch_get_main_queue(), ^{
+        completionHandler(nil,stackOverflowError);
+      });
+      
+    } else {
+      NSError *reachabilityError = [self checkReachability];
+      if (reachabilityError) {
+        completionHandler(nil, reachabilityError);
+      }
+    }
+    }
+  }];
+}
+    
+    
 
 
 + (void)completionHandlerForUser:(void (^) (NSArray *results, NSError *error))completionHandlerForUser

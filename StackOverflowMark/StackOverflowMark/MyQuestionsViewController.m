@@ -9,6 +9,7 @@
 #import "MyQuestionsViewController.h"
 #import "MyQuestionCell.h"
 #import "StackOverflowMark-Swift.h"
+#import "StackOverflowService.h"
 
 @interface MyQuestionsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -25,11 +26,22 @@
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   
-  //!!!!!!!!!!!!!!call StackOverflowService Method(need to implement) to make a call to stack, then that method calls a JsonParser (need to implement) on it and save each object into self.questions array here  Might actually get away with using a non mutable array if my method passes entire array.!!!!!!!!!!!!!!
-  
-  
-  
+  [StackOverflowService showMeMyPosts:^(NSArray *questions, NSError *error) {
+    if (error) {
+      NSLog(@"error: %@", error);
+      
+    } else {
+      self.questions = [[NSMutableArray alloc]init];
+      
+      for (Question *question in questions) {
+        [self.questions addObject:question];
 }
+    }
+  }
+   ];
+  [self.tableView reloadData];
+
+  NSLog(@"%lu",(unsigned long)self.questions.count);}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -16,6 +16,7 @@
 		AE81360E1BB9FFDA002922CA /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = AE81360D1BB9FFDA002922CA /* Node.m */; settings = {ASSET_TAGS = (); }; };
 		AE8136111BBA0520002922CA /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8136101BBA0520002922CA /* BinaryTree.m */; settings = {ASSET_TAGS = (); }; };
 		AE89E1F31BC2E47B001B6D38 /* MyQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE89E1F21BC2E47B001B6D38 /* MyQuestionCell.m */; settings = {ASSET_TAGS = (); }; };
+		AE89E1F61BC2F28B001B6D38 /* MyQuestionJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AE89E1F51BC2F28B001B6D38 /* MyQuestionJSONParser.m */; settings = {ASSET_TAGS = (); }; };
 		AEB11B071BBD2ABD00BB2940 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB11B061BBD2ABD00BB2940 /* Question.swift */; settings = {ASSET_TAGS = (); }; };
 		AED29CE81BA865E300BECFDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AED29CE71BA865E300BECFDE /* main.m */; };
 		AED29CEB1BA865E300BECFDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AED29CEA1BA865E300BECFDE /* AppDelegate.m */; };
@@ -61,6 +62,8 @@
 		AE8136101BBA0520002922CA /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		AE89E1F11BC2E47B001B6D38 /* MyQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionCell.h; sourceTree = "<group>"; };
 		AE89E1F21BC2E47B001B6D38 /* MyQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionCell.m; sourceTree = "<group>"; };
+		AE89E1F41BC2F28B001B6D38 /* MyQuestionJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionJSONParser.h; sourceTree = "<group>"; };
+		AE89E1F51BC2F28B001B6D38 /* MyQuestionJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionJSONParser.m; sourceTree = "<group>"; };
 		AEB11B051BBD2ABC00BB2940 /* StackOverflowMark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackOverflowMark-Bridging-Header.h"; sourceTree = "<group>"; };
 		AEB11B061BBD2ABD00BB2940 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		AED29CE21BA865E300BECFDE /* StackOverflowMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +161,8 @@
 				AED29D0B1BA8667C00BECFDE /* BurgerMenuViewController.h */,
 				AED29D0C1BA8667C00BECFDE /* BurgerMenuViewController.m */,
 				AE61A2491BAB099B00C68485 /* Question.h */,
+				AE89E1F41BC2F28B001B6D38 /* MyQuestionJSONParser.h */,
+				AE89E1F51BC2F28B001B6D38 /* MyQuestionJSONParser.m */,
 				AE61A24A1BAB099B00C68485 /* Question.m */,
 				AEB11B061BBD2ABD00BB2940 /* Question.swift */,
 				AEFB8C121BAFE93F0040F1EF /* ProfileJSONParser.h */,
@@ -364,6 +369,7 @@
 				AE81360E1BB9FFDA002922CA /* Node.m in Sources */,
 				AEFB8C171BAFEA360040F1EF /* Profile.m in Sources */,
 				AE1905921BA9C8180070616B /* WebViewController.m in Sources */,
+				AE89E1F61BC2F28B001B6D38 /* MyQuestionJSONParser.m in Sources */,
 				AED29CE81BA865E300BECFDE /* main.m in Sources */,
 				AED29D161BA868BB00BECFDE /* MyProfileViewController.m in Sources */,
 				AEFB8C141BAFE93F0040F1EF /* ProfileJSONParser.m in Sources */,
